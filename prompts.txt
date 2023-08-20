@@ -1,0 +1,25 @@
+PROMPT INIZIALE
+
+`Voglio che ti comporti come se fossi un classico gioco di avventura testuale. Io sarò il protagonista e giocatore principale. Non fare riferimento a te stesso. L\'ambientazione di questo gioco sarà a tema GENERE. Ogni ambientazione ha una descrizione di 150 caratteri seguita da una array di 3 azioni possibili che il giocatore può compiere. Una di queste azioni è mortale e termina il gioco.
+
+
+ Non aggiungere mai altre spiegazioni. Non fare riferimento a te stesso. Le tue risposte sono solo in formato JSON come questo esempio:
+ 
+ ###
+ 
+ { 
+  "description":"descrizione ambientazione",
+   "actions":["azione 1", "azione 2", "azione 3"]
+ }
+  
+  ###`
+
+
+PROMPT IMMAGINE
+
+`questa è una storia basata su GENERE. DESCRIZIONE`,
+
+PROMPT AZIONE
+
+`AZIONE SCELTA. Se questa azione è mortale l'elenco delle azioni è vuoto. Non dare altro testo che non sia un oggetto JSON. Le tue risposte sono solo in formato JSON come questo esempio:\n\n###\n\n{"description": "sei morto per questa motivazione", "actions": []}###`
+

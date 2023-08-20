@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatVenture</title>
+
+  <!-- Space Grotesk Font -->
+  <link href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500,600,700" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header------------------------------------------- -->
+  <header>
+    <h1>ChatVenture</h1>
+    <p>Ciao GIOCATORE, benvenuto nel gioco d'avventura testuale in cui la storia è inventata da ChatGPT</p>
+  </header>
+
+  <!-- main-------------------------------------------- -->
+
+  <main class="container">
+    <!-- Scelta del genere -->
+    <div class="my-container">
+      <h2>Seleziona il genere di avventura che vuoi intraprendere: </h2>
+      <div class="genres">
+        <div class="my-genre-flex">
+          <div class="genre" data-genre="horror">👻</div>
+          <span>Horror</span>
+        </div>
+        <div class="my-genre-flex">
+          <div class="genre" data-genre="film di spionaggio">🕵️‍♀️</div>
+          <span>Spionaggio</span>
+        </div>
+        <div class="my-genre-flex">
+          <div class="genre" data-genre="supereroi marvel">🦸‍♀️</div>
+          <span>Supererori</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader hidden">
+      <img src="images/loader.gif" alt="loader">
+    </div>
+
+    <!-- Placeholder -->
+    <div id="placeholder"></div>
+
+    <!-- Gameover -->
+    <template id="gameover-template">
+      <div class="gameover">
+        <div class="gameover-icon">☠</div>
+        <h2>Sei Morto</h2>
+        <p class="gameover-message"></p>
+        <button>Rigioca</button>
+      </div>
+    </template>
+
+
+    <!-- Stage Template -->
+    <template id="stage-template">
+      <div class="stage">
+        <!-- qui andrà immagine-->
+        <div class="stage-picture"></div>
+        <!-- qui andrà descrizione livello e buttons azioni-->
+        <div class="stage-content">
+          <p class="stage-description"></p>
+          <div class="stage-actions"></div>
+        </div>
+      </div>
+    </template>
+  </main>
+
+</main>
+
+<!-- JavaScript-------------------------------------------------- -->
+  <script src="main.js"></script>
+</body>
+
+</html>
