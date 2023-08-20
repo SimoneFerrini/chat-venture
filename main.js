@@ -56,10 +56,10 @@ function startGame(){
   completeChat.push({
     role: `system`,
     content: `Voglio che ti comporti come se fossi un classico gioco di avventura testuale. Io sarò il protagonista e giocatore 
-              principale. Non fare riferimento a te stesso. L\'ambientazione di questo gioco sarà a tema ${selectedGenre}. 
+              principale. Non fare riferimento a te stesso. L'ambientazione di questo gioco sarà a tema ${selectedGenre}. 
               Ogni ambientazione ha una descrizione di 150 caratteri seguita da una array di 3 azioni possibili che il giocatore può 
               compiere. Una di queste azioni è mortale e termina il gioco. Non aggiungere mai altre spiegazioni. Non fare riferimento 
-              a te stesso. Le tue risposte sono solo in formato JSON come questo esempio:\n\n###\n\n{"description":"descrizione 
+              a te stesso. Le tue risposte sono solo in formato JSON come questo esempio: ### {"description":"descrizione 
               ambientazione","actions":["azione 1", "azione 2", "azione 3"]}###`
   });
   //3:
@@ -168,7 +168,7 @@ function setStageActions(actions){
       completeChat.push({
         role: `user`,
         content:  `${selectedAction}. Se questa azione è mortale l'elenco delle azioni è vuoto. Non dare altro testo che non sia un 
-        oggetto JSON. Le tue risposte sono solo in formato JSON come questo esempio:\n\n###\n\n{"description": "sei morto per questa 
+        oggetto JSON. Le tue risposte sono solo in formato JSON come questo esempio: ### {"description": "sei morto per questa 
         motivazione", "actions": []}###`
       });
 
@@ -192,7 +192,7 @@ function setGameOver(description){
   //3 inserire il template in pagina
   placeholder.appendChild(gameoverElement);
   //4 recuperare button replay
-  const replayButton = documen.querySelector('.gameover button');
+  const replayButton = document.querySelector('.gameover button');
   //5 riavviare la partita ricaricando la pagina
   replayButton.addEventListener('click', function (){
     window.location.reload();
